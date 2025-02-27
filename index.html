@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surf - Stickman Surfing Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #0f172a;
+            overflow: hidden;
+            font-family: 'Press Start 2P', cursive, monospace;
+            color: white;
+        }
+        canvas {
+            display: block;
+            margin: 0 auto;
+            border-radius: 4px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        #game-container {
+            position: relative;
+        }
+        #score {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-size: 16px;
+            text-shadow: 2px 2px 0 #000;
+            pointer-events: none;
+        }
+        #controls {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            font-size: 10px;
+            text-shadow: 1px 1px 0 #000;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            border-radius: 4px;
+            pointer-events: none;
+        }
+        .title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 0 #000;
+            color: #4ade80;
+        }
+        @media (max-width: 800px) {
+            canvas {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <h1 class="title">SURF</h1>
+        <canvas id="gameCanvas"></canvas>
+        <div id="score">SCORE: 0</div>
+        <div id="controls">
+            ←→↑↓ MOVE | SPACE JUMP | Z/X TRICKS
+        </div>
+        
+        <!-- Audio element needed for Safari compatibility -->
+        <audio id="bgAudio" src="waves_of_blue.mp3" loop preload="auto"></audio>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
