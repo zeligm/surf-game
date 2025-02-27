@@ -48,7 +48,3 @@ Built with:
 - CSS for styling
 - Dynamic rendering with slope effects
 - Proper wave curve collision detection
-
-## Credits
-
-Created by Claude Code
